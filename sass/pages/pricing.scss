@@ -225,9 +225,31 @@
       }
     }
     .plans__cont--bottom {
-      display: grid;
-      grid-template-columns: repeat(2, auto);
-      grid-column-gap: 25px;
+      display: flex;
+      // grid-template-columns: repeat(2, auto);
+      column-gap: 25px;
+      .plans__cont--bottom--left {
+        h2 {
+          margin: 0;
+          padding-bottom: 16px;
+          white-space: nowrap;
+          font-weight: 600;
+          font-size: 48px;
+          line-height: 64px;
+          color: #282938;
+        }
+        p {
+          margin: 0;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 32px;
+          color: #2405f2;
+          opacity: 0.87;
+        }
+      }
+      .plans__cont--bottom--right {
+        width: 100%;
+      }
     }
   }
 }
@@ -514,6 +536,19 @@
         display: grid;
         grid-template-columns: auto;
         grid-row-gap: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  #plans {
+    .plans__container {
+      .plans__cont--bottom
+      .plans__cont--bottom--left {
+        h2 {
+          font-size: 30px;
+        }
       }
     }
   }
